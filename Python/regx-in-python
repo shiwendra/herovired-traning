@@ -1,0 +1,13 @@
+import re
+"""
+ regex pattern to match a valid email address
+  email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+  re.search(email_pattern, email)
+  returns a match object if the email is valid, otherwise returns None
+  re.search(regx_pattern, string)=> returns a match object if the string matches the regex pattern, otherwise returns None
+"""
+message = "The current python version is 3.9.1 and the latest version is 3.10.0"
+if re.search('9', message):
+    print("Match found")   
+else:
+    print("Match not found")
