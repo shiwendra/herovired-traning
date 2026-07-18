@@ -86,7 +86,7 @@ countries["Japan"]="Tokyo"  # Adding a new country "Japan" with its capital "Tok
 print("The updated dictionary of countries and their capitals is: ", countries)  # Printing the
 # updated dictionary of countries and their capitals
 # Removing a country and its capital from the dictionary using the key
-#Setting a default value for a key that may not exist in the dictionary using the get() method
+#Setting a" default value for a key that may not exist in the dictionary using the get() method
 capital_of_italy=countries.get("Italy","Capital not found")  # Getting the capital of Italy from the dictionary, with a default value if the key does not exist
 print("The capital of Italy is: ", capital_of_italy)  # Printing the capital of Italy
 countries.pop("Germany")  # Removing the country "Germany" and its capital from the dictionary
@@ -98,3 +98,7 @@ for country, capital in countries.items():
 list1=["A","B","C","D","E"]
 for i in range(len(list1)):
     print("The element at index {} is {}".format(i, list1[i]))  
+
+
+x=true  # Assigning a boolean value True to the variable x
+print("The value of x is: ", x)  # Printing the value of x
