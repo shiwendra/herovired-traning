@@ -1,5 +1,5 @@
 try:
-    with open("sample.txt", "r") as file:
+    with open("sample-1.txt", "r") as file:
         for line in file:
             print(line, end="")
 except FileNotFoundError:
