@@ -24,6 +24,7 @@ def find_contact(contact_id):
         if contact['id'] == contact_id:
             return contact, 200
     return jsonify({'error': 'Contact not found'}), 404
+#  curl -X POST http://127.0.0.1:5000/api/contacts -H "Content-Type: application/json" -d '{"name":"Umesh Kumar","email": "umesh.kumar@example.com"}'
 
 @app.route('/api/contacts', methods=['POST'])
 def add_contact():  
@@ -33,7 +34,7 @@ def add_contact():
     new_contact['id'] = max(contact['id'] for contact in contacts) + 1 if contacts else 1
     contacts.append(new_contact)
     return jsonify(new_contact), 201
-
+#  curl -X PUT http://127.0.0.1:5000/api/contacts/1 -H "Content-Type: application/json" -d '{"id": 8, "name":"Aman Kumar","email": "aman.kumar@example.com"}'
 @app.route('/api/contacts/<int:contact_id>', methods=['PUT'])
 def update_contact(contact_id):
     updated_contact = request.get_json()
